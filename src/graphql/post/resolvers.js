@@ -18,7 +18,7 @@ const posts = () => {
     {
       id: '3',
       title: 'Post title 3',
-    }
+    },
   ];
   // return null;
   // {
@@ -27,9 +27,9 @@ const posts = () => {
   // };
 };
 
-export const postResolvers = () => {
+export const postResolvers = {
   Query: {
+    posts,
     post,
-      posts
-  }
+  },
 };
