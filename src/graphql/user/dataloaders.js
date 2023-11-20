@@ -7,4 +7,4 @@ export const makeUserDataLoader = (getUsers) => {
     const users = await response.json();
     return ids.map(id => users.find(user => user.id === id));
   });
-}
+};
