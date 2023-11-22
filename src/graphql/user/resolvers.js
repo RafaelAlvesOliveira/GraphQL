@@ -9,6 +9,11 @@ const user = async (_, { id }, { getUsers }) => {
   return user.json();
 };
 
+const posts = ({ id }, _, { postDataLoader }) => {
+  return postDataLoader.load(id);
+};
+
 export const userResolvers = {
   Query: { user, users },
+  User: { posts },
 };
